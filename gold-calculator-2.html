@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="theme-color" content="#1a4a3a"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="ماشین حساب طلا"/>
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0iIzFhNGEzYSIvPgogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTAwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxYTRhM2EiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMjQ1YzQ5Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnb2xkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2YwYzA0MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6I2Q0YTAxNyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNiODg2MGIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gQ3Jvd24gLS0+CiAgPHBvbHlnb24gcG9pbnRzPSIyNTYsMTAwIDMxMCwyMDAgMzgwLDE1MCAzNjAsMjgwIDE1MiwyODAgMTMyLDE1MCAyMDIsMjAwIiBmaWxsPSJ1cmwoI2dvbGQpIi8+CiAgPCEtLSBDcm93biBiYXNlIC0tPgogIDxyZWN0IHg9IjE0NSIgeT0iMjc1IiB3aWR0aD0iMjIyIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0idXJsKCNnb2xkKSIvPgogIDwhLS0gR2VtcyBvbiBjcm93biAtLT4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIxNjUiIHI9IjE4IiBmaWxsPSIjMWE0YTNhIi8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMTY1IiByPSIxMiIgZmlsbD0iIzRkZDlhYyIvPgogIDxjaXJjbGUgY3g9IjE5MCIgY3k9IjE5NSIgcj0iMTAiIGZpbGw9IiMxYTRhM2EiLz4KICA8Y2lyY2xlIGN4PSIxOTAiIGN5PSIxOTUiIHI9IjYiIGZpbGw9IiNmMGMwNDAiLz4KICA8Y2lyY2xlIGN4PSIzMjIiIGN5PSIxOTUiIHI9IjEwIiBmaWxsPSIjMWE0YTNhIi8+CiAgPGNpcmNsZSBjeD0iMzIyIiBjeT0iMTk1IiByPSI2IiBmaWxsPSIjZjBjMDQwIi8+CiAgPCEtLSBUZXh0IC0tPgogIDx0ZXh0IHg9IjI1NiIgeT0iMzgwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSI3MiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9InVybCgjZ29sZCkiIHRleHQtYW5jaG9yPSJtaWRkbGUiPti32YTYpzwvdGV4dD4KICA8dGV4dCB4PSIyNTYiIHk9IjQ0MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC43KSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Y2FsY3VsYXRvcjwvdGV4dD4KPC9zdmc+"/>
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogItmF2KfYtNuM2YYg2K3Ys9in2Kgg2LfZhNinIiwgInNob3J0X25hbWUiOiAi2LfZhNinIiwgImRlc2NyaXB0aW9uIjogItmF2K3Yp9iz2KjZhyDZgtuM2YXYqiDYt9mE2KfYjCDYs9qp2Ycg2Ygg2b7Yp9ix2LPbjNin2YYiLCAic3RhcnRfdXJsIjogIi4vIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmNGY4ZjYiLCAidGhlbWVfY29sb3IiOiAiIzFhNGEzYSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0S0lDQThjbVZqZENCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUlnY25nOUlqRXdNQ0lnWm1sc2JEMGlJekZoTkdFellTSXZQZ29nSUR4eVpXTjBJSGRwWkhSb1BTSTFNVElpSUdobGFXZG9kRDBpTlRFeUlpQnllRDBpTVRBd0lpQm1hV3hzUFNKMWNtd29JMkpuS1NJdlBnb2dJRHhrWldaelBnb2dJQ0FnUEd4cGJtVmhja2R5WVdScFpXNTBJR2xrUFNKaVp5SWdlREU5SWpBbElpQjVNVDBpTUNVaUlIZ3lQU0l4TURBbElpQjVNajBpTVRBd0pTSStDaUFnSUNBZ0lEeHpkRzl3SUc5bVpuTmxkRDBpTUNVaUlITjBlV3hsUFNKemRHOXdMV052Ykc5eU9pTXhZVFJoTTJFaUx6NEtJQ0FnSUNBZ1BITjBiM0FnYjJabWMyVjBQU0l4TURBbElpQnpkSGxzWlQwaWMzUnZjQzFqYjJ4dmNqb2pNalExWXpRNUlpOCtDaUFnSUNBOEwyeHBibVZoY2tkeVlXUnBaVzUwUGdvZ0lDQWdQR3hwYm1WaGNrZHlZV1JwWlc1MElHbGtQU0puYjJ4a0lpQjRNVDBpTUNVaUlIa3hQU0l3SlNJZ2VESTlJakV3TUNVaUlIa3lQU0l4TURBbElqNEtJQ0FnSUNBZ1BITjBiM0FnYjJabWMyVjBQU0l3SlNJZ2MzUjViR1U5SW5OMGIzQXRZMjlzYjNJNkkyWXdZekEwTUNJdlBnb2dJQ0FnSUNBOGMzUnZjQ0J2Wm1aelpYUTlJalV3SlNJZ2MzUjViR1U5SW5OMGIzQXRZMjlzYjNJNkkyUTBZVEF4TnlJdlBnb2dJQ0FnSUNBOGMzUnZjQ0J2Wm1aelpYUTlJakV3TUNVaUlITjBlV3hsUFNKemRHOXdMV052Ykc5eU9pTmlPRGcyTUdJaUx6NEtJQ0FnSUR3dmJHbHVaV0Z5UjNKaFpHbGxiblErQ2lBZ1BDOWtaV1p6UGdvZ0lEd2hMUzBnUTNKdmQyNGdMUzArQ2lBZ1BIQnZiSGxuYjI0Z2NHOXBiblJ6UFNJeU5UWXNNVEF3SURNeE1Dd3lNREFnTXpnd0xERTFNQ0F6TmpBc01qZ3dJREUxTWl3eU9EQWdNVE15TERFMU1DQXlNRElzTWpBd0lpQm1hV3hzUFNKMWNtd29JMmR2YkdRcElpOCtDaUFnUENFdExTQkRjbTkzYmlCaVlYTmxJQzB0UGdvZ0lEeHlaV04wSUhnOUlqRTBOU0lnZVQwaU1qYzFJaUIzYVdSMGFEMGlNakl5SWlCb1pXbG5hSFE5SWpRd0lpQnllRDBpT0NJZ1ptbHNiRDBpZFhKc0tDTm5iMnhrS1NJdlBnb2dJRHdoTFMwZ1IyVnRjeUJ2YmlCamNtOTNiaUF0TFQ0S0lDQThZMmx5WTJ4bElHTjRQU0l5TlRZaUlHTjVQU0l4TmpVaUlISTlJakU0SWlCbWFXeHNQU0lqTVdFMFlUTmhJaTgrQ2lBZ1BHTnBjbU5zWlNCamVEMGlNalUySWlCamVUMGlNVFkxSWlCeVBTSXhNaUlnWm1sc2JEMGlJelJrWkRsaFl5SXZQZ29nSUR4amFYSmpiR1VnWTNnOUlqRTVNQ0lnWTNrOUlqRTVOU0lnY2owaU1UQWlJR1pwYkd3OUlpTXhZVFJoTTJFaUx6NEtJQ0E4WTJseVkyeGxJR040UFNJeE9UQWlJR041UFNJeE9UVWlJSEk5SWpZaUlHWnBiR3c5SWlObU1HTXdOREFpTHo0S0lDQThZMmx5WTJ4bElHTjRQU0l6TWpJaUlHTjVQU0l4T1RVaUlISTlJakV3SWlCbWFXeHNQU0lqTVdFMFlUTmhJaTgrQ2lBZ1BHTnBjbU5zWlNCamVEMGlNekl5SWlCamVUMGlNVGsxSWlCeVBTSTJJaUJtYVd4c1BTSWpaakJqTURRd0lpOCtDaUFnUENFdExTQlVaWGgwSUMwdFBnb2dJRHgwWlhoMElIZzlJakkxTmlJZ2VUMGlNemd3SWlCbWIyNTBMV1poYldsc2VUMGlSMlZ2Y21kcFlTeHpaWEpwWmlJZ1ptOXVkQzF6YVhwbFBTSTNNaUlnWm05dWRDMTNaV2xuYUhROUltSnZiR1FpSUdacGJHdzlJblZ5YkNnaloyOXNaQ2tpSUhSbGVIUXRZVzVqYUc5eVBTSnRhV1JrYkdVaVB0aTMyWVRZcHp3dmRHVjRkRDRLSUNBOGRHVjRkQ0I0UFNJeU5UWWlJSGs5SWpRME1DSWdabTl1ZEMxbVlXMXBiSGs5SWtkbGIzSm5hV0VzYzJWeWFXWWlJR1p2Ym5RdGMybDZaVDBpTXpZaUlHWnBiR3c5SW5KblltRW9NalUxTERJMU5Td3lOVFVzTUM0M0tTSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0krWTJGc1kzVnNZWFJ2Y2p3dmRHVjRkRDRLUEM5emRtYysiLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3N2Zyt4bWwifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQTFNVElnTlRFeUlqNEtJQ0E4Y21WamRDQjNhV1IwYUQwaU5URXlJaUJvWldsbmFIUTlJalV4TWlJZ2NuZzlJakV3TUNJZ1ptbHNiRDBpSXpGaE5HRXpZU0l2UGdvZ0lEeHlaV04wSUhkcFpIUm9QU0kxTVRJaUlHaGxhV2RvZEQwaU5URXlJaUJ5ZUQwaU1UQXdJaUJtYVd4c1BTSjFjbXdvSTJKbktTSXZQZ29nSUR4a1pXWnpQZ29nSUNBZ1BHeHBibVZoY2tkeVlXUnBaVzUwSUdsa1BTSmlaeUlnZURFOUlqQWxJaUI1TVQwaU1DVWlJSGd5UFNJeE1EQWxJaUI1TWowaU1UQXdKU0krQ2lBZ0lDQWdJRHh6ZEc5d0lHOW1abk5sZEQwaU1DVWlJSE4wZVd4bFBTSnpkRzl3TFdOdmJHOXlPaU14WVRSaE0yRWlMejRLSUNBZ0lDQWdQSE4wYjNBZ2IyWm1jMlYwUFNJeE1EQWxJaUJ6ZEhsc1pUMGljM1J2Y0MxamIyeHZjam9qTWpRMVl6UTVJaTgrQ2lBZ0lDQThMMnhwYm1WaGNrZHlZV1JwWlc1MFBnb2dJQ0FnUEd4cGJtVmhja2R5WVdScFpXNTBJR2xrUFNKbmIyeGtJaUI0TVQwaU1DVWlJSGt4UFNJd0pTSWdlREk5SWpFd01DVWlJSGt5UFNJeE1EQWxJajRLSUNBZ0lDQWdQSE4wYjNBZ2IyWm1jMlYwUFNJd0pTSWdjM1I1YkdVOUluTjBiM0F0WTI5c2IzSTZJMll3WXpBME1DSXZQZ29nSUNBZ0lDQThjM1J2Y0NCdlptWnpaWFE5SWpVd0pTSWdjM1I1YkdVOUluTjBiM0F0WTI5c2IzSTZJMlEwWVRBeE55SXZQZ29nSUNBZ0lDQThjM1J2Y0NCdlptWnpaWFE5SWpFd01DVWlJSE4wZVd4bFBTSnpkRzl3TFdOdmJHOXlPaU5pT0RnMk1HSWlMejRLSUNBZ0lEd3ZiR2x1WldGeVIzSmhaR2xsYm5RK0NpQWdQQzlrWldaelBnb2dJRHdoTFMwZ1EzSnZkMjRnTFMwK0NpQWdQSEJ2YkhsbmIyNGdjRzlwYm5SelBTSXlOVFlzTVRBd0lETXhNQ3d5TURBZ016Z3dMREUxTUNBek5qQXNNamd3SURFMU1pd3lPREFnTVRNeUxERTFNQ0F5TURJc01qQXdJaUJtYVd4c1BTSjFjbXdvSTJkdmJHUXBJaTgrQ2lBZ1BDRXRMU0JEY205M2JpQmlZWE5sSUMwdFBnb2dJRHh5WldOMElIZzlJakUwTlNJZ2VUMGlNamMxSWlCM2FXUjBhRDBpTWpJeUlpQm9aV2xuYUhROUlqUXdJaUJ5ZUQwaU9DSWdabWxzYkQwaWRYSnNLQ05uYjJ4a0tTSXZQZ29nSUR3aExTMGdSMlZ0Y3lCdmJpQmpjbTkzYmlBdExUNEtJQ0E4WTJseVkyeGxJR040UFNJeU5UWWlJR041UFNJeE5qVWlJSEk5SWpFNElpQm1hV3hzUFNJak1XRTBZVE5oSWk4K0NpQWdQR05wY21Oc1pTQmplRDBpTWpVMklpQmplVDBpTVRZMUlpQnlQU0l4TWlJZ1ptbHNiRDBpSXpSa1pEbGhZeUl2UGdvZ0lEeGphWEpqYkdVZ1kzZzlJakU1TUNJZ1kzazlJakU1TlNJZ2NqMGlNVEFpSUdacGJHdzlJaU14WVRSaE0yRWlMejRLSUNBOFkybHlZMnhsSUdONFBTSXhPVEFpSUdONVBTSXhPVFVpSUhJOUlqWWlJR1pwYkd3OUlpTm1NR013TkRBaUx6NEtJQ0E4WTJseVkyeGxJR040UFNJek1qSWlJR041UFNJeE9UVWlJSEk5SWpFd0lpQm1hV3hzUFNJak1XRTBZVE5oSWk4K0NpQWdQR05wY21Oc1pTQmplRDBpTXpJeUlpQmplVDBpTVRrMUlpQnlQU0kySWlCbWFXeHNQU0lqWmpCak1EUXdJaTgrQ2lBZ1BDRXRMU0JVWlhoMElDMHRQZ29nSUR4MFpYaDBJSGc5SWpJMU5pSWdlVDBpTXpnd0lpQm1iMjUwTFdaaGJXbHNlVDBpUjJWdmNtZHBZU3h6WlhKcFppSWdabTl1ZEMxemFYcGxQU0kzTWlJZ1ptOXVkQzEzWldsbmFIUTlJbUp2YkdRaUlHWnBiR3c5SW5WeWJDZ2paMjlzWkNraUlIUmxlSFF0WVc1amFHOXlQU0p0YVdSa2JHVWlQdGkzMllUWXB6d3ZkR1Y0ZEQ0S0lDQThkR1Y0ZENCNFBTSXlOVFlpSUhrOUlqUTBNQ0lnWm05dWRDMW1ZVzFwYkhrOUlrZGxiM0puYVdFc2MyVnlhV1lpSUdadmJuUXRjMmw2WlQwaU16WWlJR1pwYkd3OUluSm5ZbUVvTWpVMUxESTFOU3d5TlRVc01DNDNLU0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJK1kyRnNZM1ZzWVhSdmNqd3ZkR1Y0ZEQ0S1BDOXpkbWMrIiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIn1dfQ=="/>
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>ماشین حساب طلا و سکه</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --green:#1a4a3a;--green-2:#245c49;--green-3:#2d7a5f;--green-light:#e8f5f0;
+  --gold:#b8860b;--gold-2:#d4a017;--gold-3:#f0c040;
+  --white:#ffffff;--bg:#f4f8f6;--bg2:#eaf2ee;
+  --text:#1a2e26;--text2:#3a5a4a;--text3:#6a8a7a;
+  --border:#c8ddd6;--shadow:0 4px 20px rgba(26,74,58,0.1);
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Vazirmatn',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+
+/* NAV */
+.nav-wrap{position:sticky;top:0;z-index:100;background:var(--green);box-shadow:0 2px 12px rgba(0,0,0,0.15);}
+.nav{display:flex;max-width:960px;margin:0 auto;padding:10px 20px;gap:6px;}
+.nav-btn{flex:1;background:transparent;border:1px solid rgba(255,255,255,0.15);border-radius:10px;color:rgba(255,255,255,0.7);font-family:'Vazirmatn',sans-serif;font-size:0.83rem;font-weight:500;padding:10px 6px;cursor:pointer;transition:all 0.25s;display:flex;align-items:center;justify-content:center;gap:5px;}
+.nav-btn:hover{background:rgba(255,255,255,0.1);color:#fff;border-color:rgba(255,255,255,0.3);}
+.nav-btn.active{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#fff;border-color:transparent;box-shadow:0 2px 12px rgba(184,134,11,0.4);font-weight:700;}
+
+/* PAGES */
+.page{display:none;}.page.active{display:block;}
+.container{max-width:960px;margin:0 auto;padding:32px 20px 80px;}
+
+/* HEADER */
+.header{text-align:center;margin-bottom:36px;animation:fadeDown 0.6s ease both;}
+.header-icon{font-size:2.2rem;display:block;margin-bottom:10px;filter:drop-shadow(0 2px 8px rgba(184,134,11,0.4));}
+.header h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;color:var(--green);letter-spacing:2px;line-height:1.2;}
+.header h1 span{background:linear-gradient(135deg,var(--gold),var(--gold-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.header p{color:var(--text3);font-size:0.85rem;margin-top:8px;}
+.divider{display:flex;align-items:center;gap:12px;margin:12px auto;width:fit-content;}
+.divider-line{width:50px;height:2px;background:linear-gradient(to right,transparent,var(--gold));}
+.divider-line.rev{background:linear-gradient(to left,transparent,var(--gold));}
+.divider span{color:var(--gold);font-size:1.1rem;}
+
+/* CARDS */
+.card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:24px 26px;margin-bottom:18px;box-shadow:var(--shadow);animation:fadeUp 0.6s ease both;position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-3),var(--gold));}
+.card.accent{border-color:var(--green-3);border-top:none;}
+.card.accent::before{height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2),var(--gold-3));}
+
+.sec-title{font-size:0.72rem;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;font-weight:700;}
+.sec-title::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* FIELDS */
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{font-size:0.72rem;color:var(--text2);display:flex;align-items:center;gap:5px;font-weight:500;}
+.tip-icon{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;background:var(--green-light);color:var(--green);font-size:0.58rem;cursor:help;position:relative;font-style:normal;border:1px solid var(--border);}
+.tip-icon::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 7px);right:0;background:var(--green);color:#fff;font-size:0.7rem;padding:6px 12px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:0.2s;z-index:20;}
+.tip-icon:hover::after{opacity:1;}
+.field-wrap{position:relative;}
+.field-wrap input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;color:var(--text);font-family:'Vazirmatn',sans-serif;font-size:0.95rem;padding:12px 16px 12px 46px;transition:all 0.25s;outline:none;direction:ltr;text-align:right;}
+.field-wrap.price-field input{color:var(--green);font-weight:700;font-size:1.05rem;}
+.field-wrap input:focus{border-color:var(--green-3);box-shadow:0 0 0 3px rgba(45,122,95,0.12);background:#fff;}
+.field-wrap input::placeholder{color:var(--text3);font-size:0.8rem;font-weight:400;}
+.field-unit{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:0.67rem;color:var(--green-3);pointer-events:none;font-weight:600;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:560px){.two-col{grid-template-columns:1fr;}.three-col{grid-template-columns:1fr 1fr;}}
+
+/* AYAR */
+.ayar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px;}
+@media(max-width:480px){.ayar-grid{grid-template-columns:repeat(2,1fr);}}
+.ayar-btn{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;color:var(--text2);font-family:'Vazirmatn',sans-serif;font-size:0.83rem;font-weight:500;padding:10px 6px;cursor:pointer;transition:all 0.25s;text-align:center;}
+.ayar-btn small{display:block;font-size:0.63rem;color:var(--text3);margin-top:2px;}
+.ayar-btn:hover{border-color:var(--green-3);color:var(--green);}
+.ayar-btn.active{background:var(--green);border-color:var(--green);color:#fff;box-shadow:0 2px 10px rgba(26,74,58,0.25);}
+.ayar-btn.active small{color:rgba(255,255,255,0.7);}
+
+/* BUTTON */
+.calc-btn{width:100%;background:linear-gradient(135deg,var(--green),var(--green-2),var(--green-3));border:none;border-radius:12px;color:#fff;font-family:'Vazirmatn',sans-serif;font-size:1rem;font-weight:700;padding:16px;cursor:pointer;transition:all 0.3s;position:relative;overflow:hidden;letter-spacing:0.5px;box-shadow:0 4px 16px rgba(26,74,58,0.3);}
+.calc-btn::after{content:'';position:absolute;top:-50%;left:-75%;width:50%;height:200%;background:rgba(255,255,255,0.15);transform:skewX(-20deg);transition:0.6s;}
+.calc-btn:hover::after{left:125%;}
+.calc-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,74,58,0.4);}
+.calc-btn:active{transform:translateY(0);}
+
+/* ERROR */
+.error-msg{background:#fff5f5;border:1px solid #fcc;border-radius:8px;color:#c0392b;font-size:0.79rem;padding:10px 16px;margin-top:12px;display:none;text-align:center;}
+.error-msg.show{display:block;}
+
+/* HINT */
+.faragohar-hint{margin-top:12px;font-size:0.71rem;color:var(--text3);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.faragohar-hint a{color:var(--green);text-decoration:none;border-bottom:1px dashed var(--green-3);font-weight:600;}
+.faragohar-hint a:hover{color:var(--green-3);}
+.update-time{margin-right:auto;font-size:0.68rem;}
+.update-time span{color:var(--green);font-weight:600;}
+.formula-box{margin-top:12px;padding:11px 15px;background:var(--green-light);border:1px solid rgba(45,122,95,0.2);border-radius:10px;font-size:0.76rem;color:var(--text2);line-height:1.8;}
+
+/* GOLD RESULT */
+.result-card{display:none;margin-bottom:18px;}
+.result-card.show{display:block;animation:popIn 0.4s ease both;}
+.result-top{background:linear-gradient(135deg,var(--green),var(--green-2));border-radius:var(--r) var(--r) 0 0;padding:24px 26px 20px;text-align:center;}
+.result-subtitle{font-size:0.72rem;color:rgba(255,255,255,0.7);margin-bottom:6px;letter-spacing:1px;}
+.result-amount{font-family:'Playfair Display',serif;font-size:clamp(2rem,6vw,3.2rem);font-weight:900;color:#fff;direction:ltr;display:block;margin-bottom:4px;text-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.result-amount span{color:var(--gold-3);}
+.result-unit{font-size:0.82rem;color:rgba(255,255,255,0.7);}
+.breakdown{background:var(--white);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);overflow:hidden;}
+.bd-row{display:flex;justify-content:space-between;align-items:center;padding:11px 20px;border-bottom:1px solid var(--bg2);font-size:0.83rem;}
+.bd-row:hover{background:var(--bg);}
+.bd-row:last-child{border-bottom:none;}
+.bd-row.total{background:var(--green-light);font-weight:700;border-top:2px solid var(--green-3);}
+.bd-label{color:var(--text2);display:flex;align-items:center;gap:7px;}
+.bd-label.dark{color:var(--text);}
+.bd-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.bd-val{color:var(--green);direction:ltr;font-weight:600;}
+.bd-val.big{color:var(--green);font-size:1rem;font-weight:800;}
+.result-actions{display:flex;gap:9px;margin-top:13px;flex-wrap:wrap;}
+.act-btn{flex:1;min-width:100px;background:var(--white);border:1.5px solid var(--border);border-radius:10px;color:var(--text2);font-family:'Vazirmatn',sans-serif;font-size:0.76rem;padding:9px;cursor:pointer;transition:all 0.25s;text-align:center;}
+.act-btn:hover{border-color:var(--green-3);color:var(--green);background:var(--green-light);}
+
+/* COIN CARDS */
+.coin-res{display:none;margin-bottom:18px;}
+.coin-res.show{display:block;animation:popIn 0.4s ease both;}
+.coin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+@media(max-width:620px){.coin-grid{grid-template-columns:1fr;}}
+.coin-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:22px 16px;text-align:center;transition:transform 0.25s,box-shadow 0.25s;position:relative;overflow:hidden;}
+.coin-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--gold));}
+.coin-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(26,74,58,0.15);}
+.coin-icon{font-size:2rem;margin-bottom:8px;display:block;}
+.coin-name{font-size:0.82rem;color:var(--text2);margin-bottom:4px;font-weight:600;}
+.coin-weight{font-size:0.67rem;color:var(--text3);margin-bottom:12px;}
+.coin-price{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--green);direction:ltr;margin-bottom:3px;}
+.coin-unit{font-size:0.67rem;color:var(--text3);}
+.coin-bd{margin-top:12px;background:var(--bg);border-radius:8px;padding:9px 11px;text-align:right;}
+.coin-bdr{display:flex;justify-content:space-between;font-size:0.69rem;padding:4px 0;border-bottom:1px solid var(--border);}
+.coin-bdr:last-child{border-bottom:none;font-weight:700;}
+.coin-bdl{color:var(--text3);}
+.coin-bdv{color:var(--green);direction:ltr;font-weight:600;}
+
+/* PARSIAN — ساده و تمیز */
+.parsian-res{display:none;margin-bottom:18px;}
+.parsian-res.show{display:block;animation:popIn 0.4s ease both;}
+.parsian-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;}
+.parsian-item{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:16px 14px;text-align:center;transition:all 0.2s;position:relative;overflow:hidden;}
+.parsian-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),var(--gold));}
+.parsian-item:hover{border-color:var(--green-3);box-shadow:0 4px 16px rgba(26,74,58,0.12);transform:translateY(-2px);}
+.parsian-item.one-gram{border-color:var(--gold-2);background:linear-gradient(135deg,#fffdf0,#fff);}
+.parsian-item.one-gram::before{background:linear-gradient(90deg,var(--gold),var(--gold-3));}
+.p-weight{font-size:0.72rem;color:var(--text3);margin-bottom:6px;font-weight:600;letter-spacing:0.5px;}
+.p-gram{font-size:0.65rem;color:var(--text3);margin-bottom:10px;}
+.p-price{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:var(--green);direction:ltr;line-height:1.2;}
+.parsian-item.one-gram .p-price{color:var(--gold);}
+.p-unit{font-size:0.62rem;color:var(--text3);margin-top:3px;}
+
+/* INFO TABLE */
+.info-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bg2);font-size:0.83rem;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--text2);}
+.info-val{color:var(--text);font-weight:600;direction:ltr;}
+
+/* HISTORY */
+.history-section{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:22px 24px;margin-top:16px;display:none;}
+.history-section.show{display:block;animation:fadeUp 0.5s ease both;}
+.h-item{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--bg2);font-size:0.8rem;}
+.h-item:last-child{border-bottom:none;}
+.h-info{flex:1;color:var(--text2);}
+.h-price{color:var(--green);font-weight:700;direction:ltr;white-space:nowrap;}
+.h-del{background:none;border:none;color:#e74c3c;opacity:0.4;cursor:pointer;padding:4px 6px;transition:0.2s;}
+.h-del:hover{opacity:0.9;}
+.clear-btn{margin-top:12px;background:none;border:1px solid #e74c3c;border-radius:8px;color:#e74c3c;opacity:0.5;font-family:'Vazirmatn',sans-serif;font-size:0.71rem;padding:6px 14px;cursor:pointer;transition:0.2s;}
+.clear-btn:hover{opacity:0.9;}
+
+.footer{text-align:center;margin-top:40px;color:var(--text3);font-size:0.71rem;}
+.footer span{color:var(--gold);}
+
+@keyframes fadeDown{from{opacity:0;transform:translateY(-24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes popIn{from{opacity:0;transform:scale(0.97)}to{opacity:1;transform:scale(1)}}
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <div class="nav">
+    <button class="nav-btn active" onclick="showPage('gold',this)">طلای با اجرت</button>
+    <button class="nav-btn" onclick="showPage('coin',this)">سکه‌های غیر بانکی</button>
+    <button class="nav-btn" onclick="showPage('parsian',this)">پارسیان</button>
+  </div>
+</div>
+
+<!-- PAGE 1: GOLD -->
+<div class="page active" id="page-gold">
+<div class="container">
+  <div class="header">
+    
+    <h1>ماشین حساب <span>طلا</span></h1>
+    <div class="divider"><div class="divider-line"></div><span>✦</span><div class="divider-line rev"></div></div>
+    <p>محاسبه دقیق قیمت طلا با احتساب اجرت، سود فروشنده و مالیات</p>
+  </div>
+
+  <div class="card accent">
+    <div class="sec-title">💰 ورود قیمت‌های پایه</div>
+    <div class="two-col">
+      <div class="field">
+        <label>قیمت هر گرم طلای ۱۸ عیار <i class="tip-icon" data-tip="از faragohar.ir بردارید">?</i></label>
+        <div class="field-wrap price-field"><input type="text" id="g-basePrice" placeholder="مثلاً 5.250.000" oninput="fmtInput(this);markUpdate('g-upd')"/><span class="field-unit">تومان</span></div>
+      </div>
+      <div class="field">
+        <label>قیمت دلار — اختیاری</label>
+        <div class="field-wrap price-field"><input type="text" id="g-dollar" placeholder="مثلاً 91.000" oninput="fmtInput(this)"/><span class="field-unit">تومان</span></div>
+      </div>
+    </div>
+    <div class="faragohar-hint">منبع: <a href="https://faragohar.ir/m/gold/" target="_blank">faragohar.ir ↗</a><span class="update-time" id="g-upd">آخرین ورود: <span>—</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">⚖️ محاسبه‌گر</div>
+    <div class="sec-title">🔶 عیار</div>
+    <div class="ayar-grid">
+      <button class="ayar-btn active" onclick="setAyar(24,this)">۲۴ عیار<small>۹۹٫۹٪</small></button>
+      <button class="ayar-btn" onclick="setAyar(22,this)">۲۲ عیار<small>۹۱٫۶٪</small></button>
+      <button class="ayar-btn" onclick="setAyar(21,this)">۲۱ عیار<small>۸۷٫۵٪</small></button>
+      <button class="ayar-btn" onclick="setAyar(18,this)">۱۸ عیار<small>۷۵٪</small></button>
+      <button class="ayar-btn" onclick="setAyar(14,this)">۱۴ عیار<small>۵۸٫۳٪</small></button>
+      <button class="ayar-btn" onclick="setAyar(12,this)">۱۲ عیار<small>۵۰٪</small></button>
+      <button class="ayar-btn" onclick="setAyar(10,this)">۱۰ عیار<small>۴۱٫۶٪</small></button>
+      <button class="ayar-btn" onclick="setAyar(9,this)">۹ عیار<small>۳۷٫۵٪</small></button>
+    </div>
+    <div class="sec-title">📏 وزن طلا</div>
+    <div class="field" style="margin-bottom:18px">
+      <label>وزن طلا (گرم)</label>
+      <div class="field-wrap"><input type="text" id="g-weight" placeholder="مثلاً 5.5" oninput="this.value=this.value.replace(/[^0-9.]/g,'')"/><span class="field-unit">گرم</span></div>
+    </div>
+    <div class="sec-title">🧾 هزینه‌های اضافی</div>
+    <div class="three-col" style="margin-bottom:16px">
+      <div class="field"><label>اجرت ساخت <i class="tip-icon" data-tip="درصد اجرت">?</i></label><div class="field-wrap"><input type="text" id="g-fee" value="7" oninput="onlyDec(this)"/><span class="field-unit">٪</span></div></div>
+      <div class="field"><label>سود طلافروش <i class="tip-icon" data-tip="معمولاً ۱ تا ۵٪">?</i></label><div class="field-wrap"><input type="text" id="g-profit" value="3" oninput="onlyDec(this)"/><span class="field-unit">٪</span></div></div>
+      <div class="field"><label>مالیات VAT <i class="tip-icon" data-tip="معمولاً ۹٪">?</i></label><div class="field-wrap"><input type="text" id="g-tax" value="9" oninput="onlyDec(this)"/><span class="field-unit">٪</span></div></div>
+    </div>
+    <div class="error-msg" id="g-err"></div>
+    <button class="calc-btn" onclick="calcGold()">✦ محاسبه قیمت طلا ✦</button>
+  </div>
+
+  <div class="result-card" id="g-result">
+    <div class="result-top">
+      <div class="result-subtitle" id="g-subtitle">قیمت نهایی</div>
+      <span class="result-amount" id="g-finalPrice">—</span>
+      <span class="result-unit">تومان</span>
+    </div>
+    <div class="breakdown">
+      <div class="bd-row"><span class="bd-label"><span class="bd-dot" style="background:#c9a84c"></span>قیمت خالص طلا</span><span class="bd-val" id="g-rGold">—</span></div>
+      <div class="bd-row"><span class="bd-label"><span class="bd-dot" style="background:#3a8a6a"></span>اجرت ساخت</span><span class="bd-val" id="g-rFee">—</span></div>
+      <div class="bd-row"><span class="bd-label"><span class="bd-dot" style="background:#2d7a5f"></span>سود طلافروش</span><span class="bd-val" id="g-rProfit">—</span></div>
+      <div class="bd-row"><span class="bd-label"><span class="bd-dot" style="background:#c0392b"></span>مالیات VAT</span><span class="bd-val" id="g-rTax">—</span></div>
+      <div class="bd-row"><span class="bd-label dark">قیمت هر گرم (این عیار)</span><span class="bd-val" id="g-rPerGram">—</span></div>
+      <div class="bd-row"><span class="bd-label dark">وزن محاسبه‌شده</span><span class="bd-val" id="g-rWeight">—</span></div>
+      <div class="bd-row total"><span class="bd-label dark">✦ جمع کل نهایی</span><span class="bd-val big" id="g-rTotal">—</span></div>
+    </div>
+    <div class="result-actions">
+      <button class="act-btn" onclick="saveHistory('gold')">💾 ذخیره</button>
+      <button class="act-btn" id="g-copyBtn" onclick="copyGold()">📋 کپی نتیجه</button>
+      <button class="act-btn" onclick="resetGold()">🔄 جدید</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">📊 جدول تبدیل</div>
+    <div class="info-row"><span class="info-label">۲۴ عیار (خالص)</span><span class="info-val">۹۹٫۹٪</span></div>
+    <div class="info-row"><span class="info-label">۲۲ عیار</span><span class="info-val">۹۱٫۶٪</span></div>
+    <div class="info-row"><span class="info-label">۲۱ عیار (رایج ایران)</span><span class="info-val">۸۷٫۵٪</span></div>
+    <div class="info-row"><span class="info-label">۱۸ عیار (بازار رسمی)</span><span class="info-val">۷۵٪</span></div>
+    <div class="info-row"><span class="info-label">۱ مثقال</span><span class="info-val">۴٫۶۰۸ گرم</span></div>
+    <div class="info-row"><span class="info-label">۱ تولا</span><span class="info-val">۱۱٫۶۶۴ گرم</span></div>
+    <div class="info-row"><span class="info-label">۱ اونس</span><span class="info-val">۳۱٫۱۰۳ گرم</span></div>
+  </div>
+  <div class="history-section" id="g-history"><div class="sec-title">🕐 تاریخچه</div><div id="g-historyList"></div><button class="clear-btn" onclick="clearHistory('gold')">🗑️ پاک کردن</button></div>
+  <div class="footer"><p>طراحی شده با <span>♛</span> — اعداد جنبه راهنمایی دارند</p></div>
+</div></div>
+
+<!-- PAGE 2: COIN -->
+<div class="page" id="page-coin">
+<div class="container">
+  <div class="header">
+    
+    <h1>سکه‌های <span>غیر بانکی</span></h1>
+    <div class="divider"><div class="divider-line"></div><span>✦</span><div class="divider-line rev"></div></div>
+    <p>ربع سکه · نیم سکه · سکه تمام — طرح قدیم</p>
+  </div>
+  <div class="card accent">
+    <div class="sec-title">💰 قیمت پایه</div>
+    <div class="two-col">
+      <div class="field"><label>قیمت هر گرم طلای ۱۸ عیار <i class="tip-icon" data-tip="از faragohar.ir بردارید">?</i></label><div class="field-wrap price-field"><input type="text" id="c-basePrice" placeholder="مثلاً 5.250.000" oninput="fmtInput(this);markUpdate('c-upd')"/><span class="field-unit">تومان</span></div></div>
+      <div class="field"><label>قیمت دلار — اختیاری</label><div class="field-wrap price-field"><input type="text" id="c-dollar" placeholder="مثلاً 91.000" oninput="fmtInput(this)"/><span class="field-unit">تومان</span></div></div>
+    </div>
+    <div class="faragohar-hint">منبع: <a href="https://faragohar.ir/m/gold/" target="_blank">faragohar.ir ↗</a><span class="update-time" id="c-upd">آخرین ورود: <span>—</span></span></div>
+    <div class="formula-box"><span style="color:var(--green);font-weight:700">📌 فرمول:</span> (قیمت ۱۸ عیار ÷ ۷۵۰) × ۹۰۰ × وزن + <b style="color:var(--gold)">500.000 تومان</b></div>
+  </div>
+  <div class="card">
+    <div class="sec-title">🪙 محاسبه سکه‌ها</div>
+    <p style="font-size:.81rem;color:var(--text2);margin-bottom:16px;line-height:1.8">سود ثابت <b style="color:var(--green)">500.000 تومان</b> خودکار اضافه می‌شود.</p>
+    <div class="error-msg" id="c-err"></div>
+    <button class="calc-btn" onclick="calcCoins()">🪙 محاسبه قیمت سکه‌ها ✦</button>
+  </div>
+  <div class="coin-res" id="c-results">
+    <div class="coin-grid">
+      <div class="coin-card"><div class="coin-icon">🟡</div><div class="coin-name">ربع سکه</div><div class="coin-weight">۲٫۰۳۰ گرم — عیار ۹۰۰</div><div class="coin-price" id="c-rob">—</div><div class="coin-unit">تومان</div><div class="coin-bd"><div class="coin-bdr"><span class="coin-bdl">ارزش طلا</span><span class="coin-bdv" id="c-rob-gold">—</span></div><div class="coin-bdr"><span class="coin-bdl">سود فروشنده</span><span class="coin-bdv">500.000 ت</span></div><div class="coin-bdr"><span class="coin-bdl">جمع</span><span class="coin-bdv" id="c-rob-total">—</span></div></div></div>
+      <div class="coin-card"><div class="coin-icon">🟠</div><div class="coin-name">نیم سکه</div><div class="coin-weight">۴٫۰۶۰ گرم — عیار ۹۰۰</div><div class="coin-price" id="c-nim">—</div><div class="coin-unit">تومان</div><div class="coin-bd"><div class="coin-bdr"><span class="coin-bdl">ارزش طلا</span><span class="coin-bdv" id="c-nim-gold">—</span></div><div class="coin-bdr"><span class="coin-bdl">سود فروشنده</span><span class="coin-bdv">500.000 ت</span></div><div class="coin-bdr"><span class="coin-bdl">جمع</span><span class="coin-bdv" id="c-nim-total">—</span></div></div></div>
+      <div class="coin-card"><div class="coin-icon">🔴</div><div class="coin-name">سکه تمام</div><div class="coin-weight">۸٫۱۳۳ گرم — عیار ۹۰۰</div><div class="coin-price" id="c-tamam">—</div><div class="coin-unit">تومان</div><div class="coin-bd"><div class="coin-bdr"><span class="coin-bdl">ارزش طلا</span><span class="coin-bdv" id="c-tamam-gold">—</span></div><div class="coin-bdr"><span class="coin-bdl">سود فروشنده</span><span class="coin-bdv">500.000 ت</span></div><div class="coin-bdr"><span class="coin-bdl">جمع</span><span class="coin-bdv" id="c-tamam-total">—</span></div></div></div>
+    </div>
+    <div class="result-actions" style="margin-top:14px">
+      <button class="act-btn" onclick="saveHistory('coin')">💾 ذخیره</button>
+      <button class="act-btn" id="c-copyBtn" onclick="copyCoins()">📋 کپی نتیجه</button>
+    </div>
+  </div>
+  <div class="card"><div class="sec-title">📊 مشخصات فنی</div>
+    <div class="info-row"><span class="info-label">عیار سکه‌های ایرانی</span><span class="info-val">۹۰۰ (۹۰٪)</span></div>
+    <div class="info-row"><span class="info-label">وزن ربع سکه</span><span class="info-val">۲٫۰۳۰ گرم</span></div>
+    <div class="info-row"><span class="info-label">وزن نیم سکه</span><span class="info-val">۴٫۰۶۰ گرم</span></div>
+    <div class="info-row"><span class="info-label">وزن سکه تمام</span><span class="info-val">۸٫۱۳۳ گرم</span></div>
+    <div class="info-row"><span class="info-label">سود ثابت فروشنده</span><span class="info-val">500.000 تومان</span></div>
+  </div>
+  <div class="history-section" id="c-history"><div class="sec-title">🕐 تاریخچه</div><div id="c-historyList"></div><button class="clear-btn" onclick="clearHistory('coin')">🗑️ پاک کردن</button></div>
+  <div class="footer"><p>طراحی شده با <span>♛</span> — اعداد جنبه راهنمایی دارند</p></div>
+</div></div>
+
+<!-- PAGE 3: PARSIAN -->
+<div class="page" id="page-parsian">
+<div class="container">
+  <div class="header">
+    
+    <h1>سکه <span>پارسیان</span></h1>
+    <div class="divider"><div class="divider-line"></div><span>✦</span><div class="divider-line rev"></div></div>
+    <p>تمام وزن‌ها · از ۳۰ سوت تا یک گرمی</p>
+  </div>
+  <div class="card accent">
+    <div class="sec-title">💰 قیمت پایه</div>
+    <div class="two-col">
+      <div class="field"><label>قیمت هر گرم طلای ۱۸ عیار <i class="tip-icon" data-tip="از faragohar.ir بردارید">?</i></label><div class="field-wrap price-field"><input type="text" id="p-basePrice" placeholder="مثلاً 5.250.000" oninput="fmtInput(this);markUpdate('p-upd')"/><span class="field-unit">تومان</span></div></div>
+      <div class="field"><label>قیمت دلار — اختیاری</label><div class="field-wrap price-field"><input type="text" id="p-dollar" placeholder="مثلاً 91.000" oninput="fmtInput(this)"/><span class="field-unit">تومان</span></div></div>
+    </div>
+    <div class="faragohar-hint">منبع: <a href="https://faragohar.ir/m/gold/" target="_blank">faragohar.ir ↗</a><span class="update-time" id="p-upd">آخرین ورود: <span>—</span></span></div>
+    <div class="formula-box"><span style="color:var(--green);font-weight:700">📌 فرمول:</span> (قیمت ۱۸ عیار × وزن) + <b style="color:var(--gold)">۷٪</b> + <b style="color:var(--gold)">۱۵۰.۰۰۰ تومان</b></div>
+  </div>
+  <div class="card">
+    <div class="sec-title">💎 محاسبه همه سکه‌ها</div>
+    <p style="font-size:.81rem;color:var(--text2);margin-bottom:16px;line-height:1.8">با یک کلیک قیمت تمام <b style="color:var(--green)">۲۱ وزن</b> سکه پارسیان محاسبه می‌شود.</p>
+    <div class="error-msg" id="p-err"></div>
+    <button class="calc-btn" onclick="calcParsian()">💎 محاسبه سکه‌های پارسیان ✦</button>
+  </div>
+  <div class="parsian-res" id="p-results">
+    <div class="card accent">
+      <div class="sec-title">📋 قیمت سکه‌های پارسیان</div>
+      <div class="parsian-list" id="p-list"></div>
+    </div>
+    <div class="result-actions" style="margin-top:14px">
+      <button class="act-btn" onclick="saveHistory('parsian')">💾 ذخیره</button>
+      <button class="act-btn" id="p-copyBtn" onclick="copyParsian()">📋 کپی</button>
+    </div>
+  </div>
+  <div class="card"><div class="sec-title">📊 اطلاعات سکه پارسیان</div>
+    <div class="info-row"><span class="info-label">عیار</span><span class="info-val">۱۸ عیار (۷۵۰)</span></div>
+    <div class="info-row"><span class="info-label">کارمزد</span><span class="info-val">۷٪ روی ارزش طلا</span></div>
+    <div class="info-row"><span class="info-label">سود ثابت فروشنده</span><span class="info-val">150.000 تومان</span></div>
+    <div class="info-row"><span class="info-label">کوچکترین</span><span class="info-val">۳۰ سوت = ۰٫۰۳۰ گرم</span></div>
+    <div class="info-row"><span class="info-label">بزرگترین</span><span class="info-val">یک گرمی = ۱٫۰۰۰ گرم</span></div>
+  </div>
+  <div class="history-section" id="p-history"><div class="sec-title">🕐 تاریخچه</div><div id="p-historyList"></div><button class="clear-btn" onclick="clearHistory('parsian')">🗑️ پاک کردن</button></div>
+  <div class="footer"><p>طراحی شده با <span>♛</span> — اعداد جنبه راهنمایی دارند</p></div>
+</div></div>
+
+<script>
+let currentAyar=24,currentGoldMode='gram',lastGoldResult=null,lastCoinResult=null;
+let goldHistory=JSON.parse(localStorage.getItem('gcHistory')||'[]');
+let coinHistory=JSON.parse(localStorage.getItem('ccHistory')||'[]');
+let parsianHistory=JSON.parse(localStorage.getItem('pcHistory')||'[]');
+
+const AYAR={24:0.999,22:0.9167,21:0.875,18:0.75,14:0.5833,12:0.5,10:0.4167,9:0.375};
+const SELLER_PROFIT=500000;
+const PARSIAN_WEIGHTS=[
+  {soot:30,gram:0.030},{soot:50,gram:0.050},{soot:70,gram:0.070},{soot:100,gram:0.100},
+  {soot:150,gram:0.150},{soot:200,gram:0.200},{soot:250,gram:0.250},{soot:300,gram:0.300},
+  {soot:350,gram:0.350},{soot:400,gram:0.400},{soot:450,gram:0.450},{soot:500,gram:0.500},
+  {soot:550,gram:0.550},{soot:600,gram:0.600},{soot:650,gram:0.650},{soot:700,gram:0.700},
+  {soot:750,gram:0.750},{soot:800,gram:0.800},{soot:850,gram:0.850},{soot:900,gram:0.900},
+  {soot:'یک گرمی',gram:1.000}
+];
+
+function fmtN(n){
+  if(n==null||isNaN(n))return'—';
+  return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+}
+function fmtGram(n){return parseFloat(n.toFixed(3)).toString()+' گرم';}
+function parseN(s){if(!s)return 0;return parseFloat(s.replace(/\./g,'').replace(/,/g,''))||0;}
+
+function fmtInput(el){
+  var pos=el.selectionStart,oldLen=el.value.length;
+  var raw=el.value.replace(/\./g,'').replace(/[^0-9]/g,'');
+  if(!raw){el.value='';return;}
+  el.value=raw.replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+  try{var d=el.value.length-oldLen;el.setSelectionRange(pos+d,pos+d);}catch(e){}
+}
+function onlyDec(el){el.value=el.value.replace(/[^0-9.]/g,'');}
+function markUpdate(id){
+  var t=new Date().toLocaleTimeString('fa-IR');
+  document.getElementById(id).innerHTML='آخرین ورود: <span>'+t+'</span>';
+}
+
+function showPage(name,btn){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('page-'+name).classList.add('active');
+  btn.classList.add('active');
+  var gv=document.getElementById('g-basePrice').value;
+  var cv=document.getElementById('c-basePrice').value;
+  var pv=document.getElementById('p-basePrice').value;
+  var master=gv||cv||pv;
+  if(master){
+    if(!document.getElementById('g-basePrice').value)document.getElementById('g-basePrice').value=master;
+    if(!document.getElementById('c-basePrice').value)document.getElementById('c-basePrice').value=master;
+    if(!document.getElementById('p-basePrice').value)document.getElementById('p-basePrice').value=master;
+  }
+}
+
+function setAyar(a,el){
+  currentAyar=a;
+  document.querySelectorAll('.ayar-btn').forEach(function(b){b.classList.remove('active');});
+  el.classList.add('active');
+}
+
+function calcGold(){
+  var errEl=document.getElementById('g-err');
+  errEl.classList.remove('show');
+  var base=parseN(document.getElementById('g-basePrice').value);
+  var fee=parseFloat(document.getElementById('g-fee').value)||0;
+  var profit=parseFloat(document.getElementById('g-profit').value)||0;
+  var tax=parseFloat(document.getElementById('g-tax').value)||0;
+  var wRaw=document.getElementById('g-weight').value.trim();
+  if(!base){errEl.textContent='⚠️ لطفاً قیمت هر گرم طلای ۱۸ عیار را وارد کنید';errEl.classList.add('show');return;}
+  if(!wRaw){errEl.textContent='⚠️ لطفاً وزن طلا را وارد کنید';errEl.classList.add('show');return;}
+  var ppg=base*(AYAR[currentAyar]/AYAR[18]);
+  var w=parseFloat(wRaw)||0;
+  if(!w||w<=0){errEl.textContent='⚠️ وزن معتبر نیست';errEl.classList.add('show');return;}
+  var goldVal=w*ppg;
+  var feeAmt=goldVal*(fee/100);
+  var afterFee=goldVal+feeAmt;
+  var profitAmt=afterFee*(profit/100);
+  var afterProf=afterFee+profitAmt;
+  var taxAmt=afterProf*(tax/100);
+  var total=afterProf+taxAmt;
+  lastGoldResult={total:total,goldVal:goldVal,feeAmt:feeAmt,profitAmt:profitAmt,taxAmt:taxAmt,weightGram:w,ayar:currentAyar,base:base,ppg:ppg,fee:fee,profit:profit,tax:tax};
+  document.getElementById('g-subtitle').textContent='قیمت نهایی برای شما';
+  document.getElementById('g-finalPrice').textContent=fmtN(total);
+  document.getElementById('g-rGold').textContent=fmtN(goldVal)+' ت';
+  document.getElementById('g-rFee').textContent=fmtN(feeAmt)+' ت';
+  document.getElementById('g-rProfit').textContent=fmtN(profitAmt)+' ت';
+  document.getElementById('g-rTax').textContent=fmtN(taxAmt)+' ت';
+  document.getElementById('g-rPerGram').textContent=fmtN(ppg)+' ت';
+  document.getElementById('g-rWeight').textContent=fmtGram(w);
+  document.getElementById('g-rTotal').textContent=fmtN(total)+' ت';
+  var rc=document.getElementById('g-result');
+  rc.classList.remove('show');void rc.offsetWidth;rc.classList.add('show');
+  rc.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function calcCoins(){
+  var errEl=document.getElementById('c-err');
+  errEl.classList.remove('show');
+  var base=parseN(document.getElementById('c-basePrice').value);
+  if(!base){errEl.textContent='⚠️ لطفاً قیمت هر گرم طلای ۱۸ عیار را وارد کنید';errEl.classList.add('show');return;}
+  var ratePerGram=(base/750)*900;
+  var robGold=ratePerGram*2.030;
+  var nimGold=ratePerGram*4.060;
+  var tamamGold=ratePerGram*8.133;
+  var robTotal=robGold+SELLER_PROFIT;
+  var nimTotal=nimGold+SELLER_PROFIT;
+  var tamamTotal=tamamGold+SELLER_PROFIT;
+  lastCoinResult={base:base,robGold:robGold,nimGold:nimGold,tamamGold:tamamGold,robTotal:robTotal,nimTotal:nimTotal,tamamTotal:tamamTotal};
+  document.getElementById('c-rob').textContent=fmtN(robTotal);
+  document.getElementById('c-rob-gold').textContent=fmtN(robGold)+' ت';
+  document.getElementById('c-rob-total').textContent=fmtN(robTotal)+' ت';
+  document.getElementById('c-nim').textContent=fmtN(nimTotal);
+  document.getElementById('c-nim-gold').textContent=fmtN(nimGold)+' ت';
+  document.getElementById('c-nim-total').textContent=fmtN(nimTotal)+' ت';
+  document.getElementById('c-tamam').textContent=fmtN(tamamTotal);
+  document.getElementById('c-tamam-gold').textContent=fmtN(tamamGold)+' ت';
+  document.getElementById('c-tamam-total').textContent=fmtN(tamamTotal)+' ت';
+  var cr=document.getElementById('c-results');
+  cr.classList.remove('show');void cr.offsetWidth;cr.classList.add('show');
+  cr.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function calcParsian(){
+  var errEl=document.getElementById('p-err');
+  errEl.classList.remove('show');
+  var base=parseN(document.getElementById('p-basePrice').value);
+  if(!base){errEl.textContent='⚠️ لطفاً قیمت هر گرم طلای ۱۸ عیار را وارد کنید';errEl.classList.add('show');return;}
+  var list=document.getElementById('p-list');
+  list.innerHTML='';
+  var rows=[];
+  PARSIAN_WEIGHTS.forEach(function(w,i){
+    var goldVal=base*w.gram;
+    var fee=goldVal*0.07;
+    var total=goldVal+fee+150000;
+    rows.push({soot:w.soot,gram:w.gram,goldVal:goldVal,fee:fee,total:total});
+    var div=document.createElement('div');
+    div.className='parsian-item'+(w.gram===1.000?' one-gram':'');
+    div.innerHTML='<div class="p-weight">'+w.soot+' سوت</div>'
+      +'<div class="p-gram">'+w.gram.toFixed(3)+' گرم</div>'
+      +'<div class="p-price">'+fmtN(total)+'</div>'
+      +'<div class="p-unit">تومان</div>';
+    list.appendChild(div);
+  });
+  window._parsianRows=rows;
+  var pr=document.getElementById('p-results');
+  pr.classList.remove('show');void pr.offsetWidth;pr.classList.add('show');
+  pr.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function copyGold(){
+  if(!lastGoldResult)return;
+  var r=lastGoldResult;
+  var txt='ماشین حساب طلا\nعیار: '+r.ayar+' — وزن: '+fmtGram(r.weightGram)+'\nقیمت خالص: '+fmtN(r.goldVal)+' تومان\nاجرت ('+r.fee+'٪): '+fmtN(r.feeAmt)+' تومان\nسود ('+r.profit+'٪): '+fmtN(r.profitAmt)+' تومان\nمالیات ('+r.tax+'٪): '+fmtN(r.taxAmt)+' تومان\n──────────\nجمع کل: '+fmtN(r.total)+' تومان';
+  navigator.clipboard.writeText(txt).catch(function(){});
+  var btn=document.getElementById('g-copyBtn');btn.textContent='✅ کپی شد!';
+  setTimeout(function(){btn.textContent='📋 کپی نتیجه';},2200);
+}
+
+function copyCoins(){
+  if(!lastCoinResult)return;
+  var r=lastCoinResult;
+  var txt='سکه‌های غیر بانکی\nقیمت پایه: '+fmtN(r.base)+' تومان\n──────────\nربع سکه: '+fmtN(r.robTotal)+' تومان\nنیم سکه: '+fmtN(r.nimTotal)+' تومان\nسکه تمام: '+fmtN(r.tamamTotal)+' تومان';
+  navigator.clipboard.writeText(txt).catch(function(){});
+  var btn=document.getElementById('c-copyBtn');btn.textContent='✅ کپی شد!';
+  setTimeout(function(){btn.textContent='📋 کپی نتیجه';},2200);
+}
+
+function copyParsian(){
+  if(!window._parsianRows)return;
+  var base=parseN(document.getElementById('p-basePrice').value);
+  var txt='سکه‌های پارسیان — پایه: '+fmtN(base)+' تومان\n──────────\n';
+  window._parsianRows.forEach(function(r){txt+=r.soot+' سوت: '+fmtN(r.total)+' تومان\n';});
+  navigator.clipboard.writeText(txt).catch(function(){});
+  var btn=document.getElementById('p-copyBtn');btn.textContent='✅ کپی شد!';
+  setTimeout(function(){btn.textContent='📋 کپی جدول';},2200);
+}
+
+function resetGold(){
+  document.getElementById('g-weight').value='';
+  document.getElementById('g-result').classList.remove('show');
+  lastGoldResult=null;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function saveHistory(type){
+  var btn=event.target,orig=btn.textContent;
+  if(type==='gold'){
+    if(!lastGoldResult)return;
+    goldHistory.unshift({total:lastGoldResult.total,weightGram:lastGoldResult.weightGram,ayar:lastGoldResult.ayar,date:new Date().toLocaleString('fa-IR')});
+    if(goldHistory.length>30)goldHistory.pop();
+    localStorage.setItem('gcHistory',JSON.stringify(goldHistory));
+    renderHistory('gold');
+  } else if(type==='coin'){
+    if(!lastCoinResult)return;
+    coinHistory.unshift({base:lastCoinResult.base,tamamTotal:lastCoinResult.tamamTotal,date:new Date().toLocaleString('fa-IR')});
+    if(coinHistory.length>30)coinHistory.pop();
+    localStorage.setItem('ccHistory',JSON.stringify(coinHistory));
+    renderHistory('coin');
+  } else if(type==='parsian'){
+    if(!window._parsianRows)return;
+    var base=parseN(document.getElementById('p-basePrice').value);
+    parsianHistory.unshift({base:base,rows:window._parsianRows,date:new Date().toLocaleString('fa-IR')});
+    if(parsianHistory.length>20)parsianHistory.pop();
+    localStorage.setItem('pcHistory',JSON.stringify(parsianHistory));
+    renderHistory('parsian');
+  }
+  btn.textContent='✅ ذخیره شد!';
+  setTimeout(function(){btn.textContent=orig;},2200);
+}
+
+function renderHistory(type){
+  if(type==='gold'){
+    var sec=document.getElementById('g-history');
+    var list=document.getElementById('g-historyList');
+    if(!goldHistory.length){sec.classList.remove('show');return;}
+    sec.classList.add('show');
+    list.innerHTML=goldHistory.map(function(item,i){
+      return '<div class="h-item"><div class="h-info">'+item.date+' — '+item.weightGram.toFixed(2)+' گرم — عیار '+item.ayar+'</div><div class="h-price">'+fmtN(item.total)+' ت</div><button class="h-del" onclick="delHistory(\'gold\','+i+')">✕</button></div>';
+    }).join('');
+  } else if(type==='coin'){
+    var sec=document.getElementById('c-history');
+    var list=document.getElementById('c-historyList');
+    if(!coinHistory.length){sec.classList.remove('show');return;}
+    sec.classList.add('show');
+    list.innerHTML=coinHistory.map(function(item,i){
+      return '<div class="h-item"><div class="h-info">'+item.date+' — پایه: '+fmtN(item.base)+' ت</div><div class="h-price">تمام: '+fmtN(item.tamamTotal)+' ت</div><button class="h-del" onclick="delHistory(\'coin\','+i+')">✕</button></div>';
+    }).join('');
+  } else if(type==='parsian'){
+    var sec=document.getElementById('p-history');
+    var list=document.getElementById('p-historyList');
+    if(!parsianHistory.length){sec.classList.remove('show');return;}
+    sec.classList.add('show');
+    list.innerHTML=parsianHistory.map(function(item,i){
+      return '<div class="h-item"><div class="h-info">'+item.date+' — پایه: '+fmtN(item.base)+' ت</div><div class="h-price">'+item.rows.length+' وزن</div><button class="h-del" onclick="delHistory(\'parsian\','+i+')">✕</button></div>';
+    }).join('');
+  }
+}
+
+function delHistory(type,i){
+  if(type==='gold'){goldHistory.splice(i,1);localStorage.setItem('gcHistory',JSON.stringify(goldHistory));renderHistory('gold');}
+  else if(type==='coin'){coinHistory.splice(i,1);localStorage.setItem('ccHistory',JSON.stringify(coinHistory));renderHistory('coin');}
+  else if(type==='parsian'){parsianHistory.splice(i,1);localStorage.setItem('pcHistory',JSON.stringify(parsianHistory));renderHistory('parsian');}
+}
+
+function clearHistory(type){
+  if(!confirm('تاریخچه پاک شود؟'))return;
+  if(type==='gold'){goldHistory=[];localStorage.setItem('gcHistory','[]');renderHistory('gold');}
+  else if(type==='coin'){coinHistory=[];localStorage.setItem('ccHistory','[]');renderHistory('coin');}
+  else if(type==='parsian'){parsianHistory=[];localStorage.setItem('pcHistory','[]');renderHistory('parsian');}
+}
+
+document.addEventListener('keydown',function(e){
+  if(e.key==='Enter'){
+    var p=document.querySelector('.page.active').id;
+    if(p==='page-gold')calcGold();
+    else if(p==='page-coin')calcCoins();
+    else calcParsian();
+  }
+});
+
+renderHistory('gold');
+renderHistory('coin');
+renderHistory('parsian');
+</script>
+
+
+
+
+
+<div id="pwa-banner" style="display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:9999;background:#1a4a3a;color:#fff;border-radius:16px;padding:16px 18px;box-shadow:0 8px 40px rgba(0,0,0,0.35);align-items:center;gap:12px;font-family:'Vazirmatn',sans-serif;max-width:350px;width:92%;border:1px solid rgba(212,160,23,0.4);">
+  <div style="flex:1">
+    <div style="font-weight:700;font-size:0.9rem;margin-bottom:3px">📲 نصب روی صفحه اصلی</div>
+    <div style="font-size:0.72rem;opacity:0.8">آفلاین هم کار می‌کنه ✓</div>
+  </div>
+  <div style="display:flex;gap:7px;flex-shrink:0;margin-top:8px">
+    <button onclick="installPWA()" style="background:linear-gradient(135deg,#d4a017,#f0c040);border:none;border-radius:10px;color:#1a2e26;font-family:'Vazirmatn',sans-serif;font-size:0.82rem;font-weight:700;padding:9px 18px;cursor:pointer">نصب</button>
+    <button onclick="closeBanner()" style="background:rgba(255,255,255,0.15);border:none;border-radius:10px;color:#fff;font-size:1rem;width:36px;cursor:pointer">✕</button>
+  </div>
+</div>
+
+<script>
+var deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', function(e) {
+  e.preventDefault();
+  deferredPrompt = e;
+  var banner = document.getElementById('pwa-banner');
+  banner.style.display = 'flex';
+  banner.style.flexDirection = 'column';
+});
+
+function installPWA() {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then(function() {
+    deferredPrompt = null;
+    closeBanner();
+  });
+}
+
+function closeBanner() {
+  var b = document.getElementById('pwa-banner');
+  b.style.opacity = '0';
+  b.style.transition = 'opacity 0.3s';
+  setTimeout(function() { b.style.display = 'none'; }, 300);
+}
+
+window.addEventListener('appinstalled', function() { closeBanner(); });
+</script>
+
+</body>
+</html>
